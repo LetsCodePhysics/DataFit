@@ -1,3 +1,4 @@
+import math
 import numpy                    # http://numpy.scipy.org/
 import scipy                    # http://scipy.org/
 import scipy.optimize, scipy.special, scipy.stats
@@ -55,8 +56,7 @@ def FitData(p_guess,func):
   y_sigma = []
 
   for line in data_list:
-    print("line 0= ",line[0])
-    if not line[0]:
+    if ( not math.isnan(line[0]) ):
       x_data.append(float(line[0]))
       y_data.append(float(line[1]))
       y_sigma.append(float(line[2]))
