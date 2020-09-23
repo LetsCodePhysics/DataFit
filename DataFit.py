@@ -55,6 +55,7 @@ def FitData(p_guess,func):
   y_sigma = []
 
   for line in data_list:
+    print("line 0= ",line[0])
     if not line[0]:
       x_data.append(float(line[0]))
       y_data.append(float(line[1]))
