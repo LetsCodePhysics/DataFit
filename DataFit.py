@@ -55,9 +55,10 @@ def FitData(p_guess,func):
   y_sigma = []
 
   for line in data_list:
-    x_data.append(float(line[0]))
-    y_data.append(float(line[1]))
-    y_sigma.append(float(line[2]))
+    if not line[0]:
+      x_data.append(float(line[0]))
+      y_data.append(float(line[1]))
+      y_sigma.append(float(line[2]))
 
   ## Load data
   # x_data, y_data, y_sigma = numpy.loadtxt(data_file, unpack=True)
